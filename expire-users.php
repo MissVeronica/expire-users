@@ -1,10 +1,23 @@
 <?php
+/**
+ * Plugin Name:         Expire Users
+ * Version:             2.0.0
+ * Author:              Miss Veronica
+ * License:             GPL v2 or later
+ * License URI:         https://www.gnu.org/licenses/gpl-2.0.html
+ * Author URI:          https://github.com/MissVeronica
+ * Plugin URI:          https://github.com/MissVeronica/expire-users
+ * Update URI:          https://github.com/MissVeronica/expire-users
+ * 
+ * Copyright (C) 2020 Original Ben Huson (Original Code)
+ * Copyright (C) 2026 Your Name (Modifications)
+ */
 
 /*
 Plugin Name: Expire Users
 Plugin URI: http://wordpress.org/extend/plugins/expire-users/
 Description: Set expiry dates for user logins.
-Version: 1.3.0
+Version: 1.2.2
 Author: Ben Huson
 Author URI: https://github.com/benhuson/expire-users
 License: GPLv2
@@ -18,7 +31,7 @@ Domain Path: /languages
 if ( ! defined( 'ABSPATH' ) ) exit;
 
 // Version
-define( 'EXPIRE_USERS_VERSION', '1.3.0' );
+define( 'EXPIRE_USERS_VERSION', '2.0.0' );
 define( 'EXPIRE_USERS_DB_VERSION', '1' );
 
 // Includes
