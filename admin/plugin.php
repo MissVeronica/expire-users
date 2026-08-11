@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 add_filter( 'plugin_row_meta', array( 'Expire_User_Admin_Plugin', 'plugin_row_meta' ), 10, 4 );
 add_filter( 'plugin_action_links_expire-users/expire-users.php', array( 'Expire_User_Admin_Plugin', 'plugin_action_links' ) );
