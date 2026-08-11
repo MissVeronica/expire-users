@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 add_action( 'admin_menu', array( 'Expire_User_Admin_Help', 'admin_menu' ) );
 add_action( 'expire_users_help_tabs', array( 'Expire_User_Admin_Help', 'help_tabs' ), 5 );
