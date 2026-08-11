@@ -1,4 +1,5 @@
 <?php
+if ( ! defined( 'ABSPATH' ) ) exit;
 
 add_shortcode( 'expire_users_current_user_expire_date', array( 'Expire_Users_Shortcodes', 'current_user_expire_date' ) );
 add_shortcode( 'expire_users_current_user_expire_countdown', array( 'Expire_Users_Shortcodes', 'current_user_expire_countdown' ) );
