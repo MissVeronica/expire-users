@@ -6,6 +6,8 @@
 // @todo Add expiring soon view
 // @todo Add expired role
 
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 class Expire_User_Admin {
 
 	var $settings = null;
