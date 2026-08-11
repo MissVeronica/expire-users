@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:         Expire Users
+ * Plugin Name:         Expire Users for UM
  * Version:             2.0.0
  * Author:              Miss Veronica
  * License:             GPL v2 or later
@@ -9,8 +9,8 @@
  * Plugin URI:          https://github.com/MissVeronica/expire-users
  * Update URI:          https://github.com/MissVeronica/expire-users
  * 
- * Copyright (C) 2020 Original Ben Huson (Original Code)
- * Copyright (C) 2026 Your Name (Modifications)
+ * Copyright (C) 2025 Ben Huson (Original Code)
+ * Copyright (C) 2026 Miss Veronica (Modifications)
  */
 
 /*
