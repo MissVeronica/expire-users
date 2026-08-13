@@ -100,7 +100,7 @@ Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</co
 * [WP Translations](https://translate.wordpress.org/projects/wp-plugins/expire-users/)
 * Plugin text domain - expire-users - for the "[Loco Translate](https://wordpress.org/plugins/loco-translate/)" plugin or the "[Say What?](https://wordpress.org/plugins/say-what/)" plugin 
 
-## 2.8 Meta data
+### 2.8 Meta data
 * <code>_expire_user_date</code> Timestamp for time to expire or when expired
 * <code>_expire_user_expired</code> values Y or N ie expired or not expired
 * <code>_expire_user_settings</code> Current settings array for this User
