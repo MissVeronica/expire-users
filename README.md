@@ -70,12 +70,7 @@ Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM D
 * User dropdown per User with action "Renew Now"
 * Filter for listing "Users not expired" and "Users expired"
 
-### 1.8 Translations & Text changes
-* For translations use the "[Loco Translate](https://wordpress.org/plugins/loco-translate/)" plugin
-* For a few changes of text use the "[Say What?](https://wordpress.org/plugins/say-what/)" plugin
-* Plugin text domain in both cases - um-expire-users
-
-### 1.9 Shortcodes
+### 1.8 Shortcodes
 Displays the expiry date for the current user.
 * <code>[expire_users_current_user_expire_date]</code> used at the first line of the User Account page
 
@@ -96,15 +91,15 @@ Allowed Attributes:
 
 Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</code>
 
-### 1.10 Cron job
+### 1.9 Cron job
 * The "Expire Users" file cron.php is updated by "User Role Expiration" during activation to include calls required for the integration.
 
-### 1.11 Translations & Text changes
-* Available local language files ( FR, NL, IT, BR ) are downloaded and installed with the plugin
+### 1.10 Translations & Text changes
+* Available are local language files ( FR, NL, IT, BR ) for the original "Expire Users" plugin are downloaded and installed with the plugin
 * [WP Translations](https://translate.wordpress.org/projects/wp-plugins/expire-users/)
 * Plugin text domain - expire-users - for the "[Loco Translate](https://wordpress.org/plugins/loco-translate/)" plugin or the "[Say What?](https://wordpress.org/plugins/say-what/)" plugin 
 
-## 1.12. Meta data
+## 1.11 Meta data
 * <code>_expire_user_date</code> Timestamp for time to expire or when expired
 * <code>_expire_user_expired</code> values Y or N ie expired or not expired
 * <code>_expire_user_settings</code> Current settings array for this User
@@ -112,7 +107,7 @@ Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</co
 * <code>expire_users_reminder</code> The User setting at the Account page for a Reminder email yes/no
 * <code>_expire_users_reminder</code> Timestamp for sending a Reminder email. Empty after Reminder email sent.
 
-### 1.13 Updates
+### 1.12 Updates
 None
 
 ## 2. Plugin References
