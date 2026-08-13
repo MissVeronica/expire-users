@@ -37,7 +37,8 @@ New template HTML sources are copied by the plugin to your active theme's local 
 * Expire Users - Admin about User Role Expired = If template is active an email is sent to the Site Admin about an User Role being expired.
 * Expire Users - Admin about User Role Renewal = If template is active an email is sent to the Site Admin about a renewal by an Account with Expired User Role.
 
-### 1.4 Placeholders
+## 2. Plugin functions
+### 2.1 Placeholders
 UM [email placeholders](https://docs.ultimatemember.com/article/1340-placeholders-for-email-templates) are valid. 
 
 These placeholders are only valid for the 5 email templates used by this plugin. 
@@ -49,11 +50,11 @@ These placeholders are only valid for the 5 email templates used by this plugin.
 * {expiration-reminder-days} - Number of days the Reminder email is sent in advance of User Role Expiration
 * {expiration-role} - Expiration User Role name  
         
-### 1.5 User Account Page
+### 2.2 User Account Page
 * Active User's [Account page](https://imgur.com/a/rZPeTc0)
 * Expired User's [Account page](https://imgur.com/a/tuGjDRO)
 
-### 1.6 UM Dashboard
+### 2.3 UM Dashboard
 Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM Dashboard](https://imgur.com/a/Gviz1mO)
 * Next WP Cronjob scheduled at %s
 * All User Expiration Roles
@@ -64,13 +65,13 @@ Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM D
 * %s Users may expire during next 7 days
 * %s Reminder emails will be sent during the nect 24 hours
 
-### 1.7 WP All Users
+### 2.4 WP All Users
 * Expire Date column sortable
 * User dropdown per User not expired with action "Expire Now"
 * User dropdown per User with action "Renew Now"
 * Filter for listing "Users not expired" and "Users expired"
 
-### 1.8 Shortcodes
+### 2.5 Shortcodes
 Displays the expiry date for the current user.
 * <code>[expire_users_current_user_expire_date]</code> used at the first line of the User Account page
 
@@ -91,15 +92,15 @@ Allowed Attributes:
 
 Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</code>
 
-### 1.9 Cron job
+### 2.6 Cron job
 * The "Expire Users" file cron.php is updated by "User Role Expiration" during activation to include calls required for the integration.
 
-### 1.10 Translations & Text changes
+### 2.7 Translations & Text changes
 * Available are local language files ( FR, NL, IT, BR ) for the original "Expire Users" plugin are downloaded and installed with the plugin
 * [WP Translations](https://translate.wordpress.org/projects/wp-plugins/expire-users/)
 * Plugin text domain - expire-users - for the "[Loco Translate](https://wordpress.org/plugins/loco-translate/)" plugin or the "[Say What?](https://wordpress.org/plugins/say-what/)" plugin 
 
-## 1.11 Meta data
+## 2.8 Meta data
 * <code>_expire_user_date</code> Timestamp for time to expire or when expired
 * <code>_expire_user_expired</code> values Y or N ie expired or not expired
 * <code>_expire_user_settings</code> Current settings array for this User
@@ -107,23 +108,23 @@ Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</co
 * <code>expire_users_reminder</code> The User setting at the Account page for a Reminder email yes/no
 * <code>_expire_users_reminder</code> Timestamp for sending a Reminder email. Empty after Reminder email sent.
 
-### 1.12 Updates
+## 3. Updates
 None
 
-## 2. Plugin References
+## 4. Plugin References
 * [Expire Users](https://github.com/benhuson/expire-users)
 * [Email Parse Shortcode](https://github.com/MissVeronica/um-email-parse-shortcode)
 * [Additional email Recipients](https://github.com/MissVeronica/um-additional-email-recipients)
 * [Index WP MySQL For Speed](https://wordpress.org/plugins/index-wp-mysql-for-speed/)
 
-## 3. Installation and Updates
-### 3.1 First install
+## 5. Installation and Updates
+### 5.1 First install
 * Download and install the "Expire User Roles" plugin ZIP file via the green "Code" button at this site
 * Install as new Plugin, upload the "Expire User Roles" ZIP file in WordPress -> Plugins -> Add New -> Upload Plugin.
 * Activate the "Expire User Roles" Plugin
-### 3.1 Updates
+### 5.2 Updates
 * 
-## 4. Support
+## 6. Support
 * [Issues](https://github.com/MissVeronica/um-expire-user-roles/issues)
 * [Discussions](https://github.com/MissVeronica/um-expire-user-roles/discussions)
 
