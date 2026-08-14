@@ -65,7 +65,7 @@ Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM D
 * %s Reminder emails will be sent during the nect 24 hours
 
 ### 2.4 WP All Users
-* Expire Date column sortable ascending/descending
+* "Expire Date" column sortable ascending/descending with expired times in red color
 * User dropdown per User not expired with action "Expire Now"
 * User dropdown per User with action "Renew Now" for active, expired and inactive Users
 * Filter for listing "Users not expired" and "Users expired"
