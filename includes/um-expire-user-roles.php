@@ -181,13 +181,20 @@ class UM_Expire_Users {
     public function get_default_expire_settings() {
 
         if ( empty( $this->expire_user_settings )) {
-            $this->expire_user_settings = get_option( 'expire_users_default_expire_settings' );
-            $this->role_exclude_setting = wp_roles()->get_names()[$this->expire_user_settings['expire_user_role']];
-            
+
+            $settings = get_option( 'expire_users_default_expire_settings' );
             $this->expire_user_settings['plugin_configured'] = false;
-            if ( isset( $this->expire_user_settings['auto_expire_registered_users']) && $this->expire_user_settings['auto_expire_registered_users'] == 'Y' ) {
-                if ( isset( $this->expire_user_settings['expire_user_role']) && ! empty( $this->expire_user_settings['expire_user_role'])) {
-                    $this->expire_user_settings['plugin_configured'] = true;
+            if ( $settings !== false && is_array( $settings )) {
+
+                $this->expire_user_settings = array_merge( $settings, $this->expire_user_settings );
+                if ( isset( $this->expire_user_settings['expire_user_role'] )) {
+                    $this->role_exclude_setting = wp_roles()->get_names()[$this->expire_user_settings['expire_user_role']];
+                }
+
+                if ( isset( $this->expire_user_settings['auto_expire_registered_users']) && $this->expire_user_settings['auto_expire_registered_users'] == 'Y' ) {
+                    if ( isset( $this->expire_user_settings['expire_user_role']) && ! empty( $this->expire_user_settings['expire_user_role'])) {
+                        $this->expire_user_settings['plugin_configured'] = true;
+                    }
                 }
             }
         }
@@ -707,7 +714,7 @@ class UM_Expire_Users {
                                 $this->templates['renewal'] => array(
                                         'key'            => $this->templates['renewal'],
                                         'title'          => esc_html__( 'Expire Users - Admin about User Role Renewal', 'expire-users' ),
-                                        'description'    => esc_html__( 'If template is active an email is sent to the Site Admin about a renewal by an Account with Expired User Role.', 'expire-users' ),
+                                        'description'    => esc_html__( 'If template is active an email is sent to the Site Admin about a renewal by an Account with Expired User Role or via WP All Users backend renewal.', 'expire-users' ),
                                         'recipient'      => 'admin',
                                         'default_active' => true,
                                         'subject'        => esc_html__( '[{site_name}] User Role Renewal', 'expire-users' ),
