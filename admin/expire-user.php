@@ -19,14 +19,14 @@ class Expire_User_Admin {
 		add_action( 'admin_init', array( $this, 'expire_user_now' ) );
 
 		// Profile Fields
-		add_action( 'show_user_profile', array( $this, 'extra_user_profile_fields' ) );
-		add_action( 'edit_user_profile', array( $this, 'extra_user_profile_fields' ) );
-		add_action( 'user_new_form', array( $this, 'user_new_form' ) );
+	  //add_action( 'show_user_profile', array( $this, 'extra_user_profile_fields' ) );
+	  //add_action( 'edit_user_profile', array( $this, 'extra_user_profile_fields' ) );
+	  //add_action( 'user_new_form', array( $this, 'user_new_form' ) );
 
 		// Save Fields
-		add_action( 'personal_options_update', array( $this, 'save_extra_user_profile_fields' ) );
-		add_action( 'edit_user_profile_update', array( $this, 'save_extra_user_profile_fields' ) );
-		add_action( 'user_register', array( $this, 'save_extra_user_profile_fields' ) );
+	  //add_action( 'personal_options_update', array( $this, 'save_extra_user_profile_fields' ) );
+	  //add_action( 'edit_user_profile_update', array( $this, 'save_extra_user_profile_fields' ) );
+	  //add_action( 'user_register', array( $this, 'save_extra_user_profile_fields' ) );
 
 		// Scripts and Styles
 		add_action( 'admin_print_styles', array( $this, 'admin_print_styles' ) );
@@ -186,7 +186,7 @@ class Expire_User_Admin {
 		} else {
 			$expire_user = new Expire_User();
 		}
-		
+
 		// Default Expire Date Field Values
 		$radio_never      = '';
 		$radio_date       = '';
