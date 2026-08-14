@@ -15,28 +15,26 @@ class Expire_Users_Cron {
 
 		global $um_expire_users;
 
-		$maybe_expire_users = Expire_Users_Query::query( array(
-			'expired'              => false,
-			'expired_date'         => current_time( 'timestamp' ),
-			'expired_date_compare' => '<'
-		) );
+		if ( get_option( 'expire_users_default_expire_settings' ) !== false ) {
 
-		$um_expired_users = $maybe_expire_users->results;
+			$maybe_expire_users = Expire_Users_Query::query( array(
+				'expired'              => false,
+				'expired_date'         => current_time( 'timestamp' ),
+				'expired_date_compare' => '<'
+			) );
 
-		if ( class_exists( 'UM_Expire_Users' ) && isset( $um_expire_users )) {
+			$um_expired_users = $maybe_expire_users->results;
 			$um_expired_users = $um_expire_users->um_expire_users_validation( $um_expired_users );
-		}
 
-		if ( count( $um_expired_users ) > 0 ) {
+			if ( count( $um_expired_users ) > 0 ) {
 
-			foreach ( $um_expired_users as $expired_user ) {
+				foreach ( $um_expired_users as $expired_user ) {
 
-				$this_expire_user = new Expire_User( $expired_user->ID );
-				$this_expire_user->expire();
+					$this_expire_user = new Expire_User( $expired_user->ID );
+					$this_expire_user->expire();
+				}
 			}
-		}
 
-		if ( class_exists( 'UM_Expire_Users' ) && isset( $um_expire_users )) {
 			$um_expire_users->um_expired_users_send_reminders();
 			$recurrence = $um_expire_users->cron_schedule_update_recurrence();
 		}
@@ -54,4 +52,3 @@ class Expire_Users_Cron {
 		}
 	}
 }
-
