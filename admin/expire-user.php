@@ -398,7 +398,7 @@ class Expire_User_Admin {
 	 */
 	function admin_print_styles() {
 		if ( $this->is_admin_screen( array( 'users_page_expire_users', 'user-edit', 'profile', 'users' ) ) ) {
-			if ( file_exists( WP_PLUGIN_DIR . '/expire-users/css/admin.css' ) ) {
+			if ( file_exists( Plugin_Path_EUR . 'css/admin.css' ) ) {
 				wp_register_style( 'css-layouts-admin', plugins_url( 'css/admin.css', dirname( __FILE__ ) ) );
 				wp_enqueue_style( 'css-layouts-admin' );
 			}
