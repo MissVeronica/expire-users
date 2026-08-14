@@ -34,7 +34,7 @@ New template HTML sources are copied by the plugin to your active theme's local 
 * Expire Users - User Reminder = If template is active an email is sent to the user as a Reminder of the upcoming User Role Expiration.
 * Expire Users - User Role Expired = If template is active an email is sent to the User when the User Role is expired.
 * Expire Users - Admin about User Role Expired = If template is active an email is sent to the Site Admin about an User Role being expired.
-* Expire Users - Admin about User Role Renewal = If template is active an email is sent to the Site Admin about a renewal by an Account with Expired User Role.
+* Expire Users - Admin about User Role Renewal = If template is active an email is sent to the Site Admin about a renewal by an Account with Expired User Role or via WP All Users backend renewal.
 
 ## 2. Plugin functions
 ### 2.1 Placeholders
@@ -67,7 +67,7 @@ Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM D
 ### 2.4 WP All Users
 * Expire Date column sortable
 * User dropdown per User not expired with action "Expire Now"
-* User dropdown per User with action "Renew Now"
+* User dropdown per User with action "Renew Now" for active, expired and inactive Users
 * Filter for listing "Users not expired" and "Users expired"
 
 ### 2.5 Shortcodes
@@ -111,9 +111,9 @@ Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</co
 None
 
 ## 4. Plugin References
-* [Expire Users](https://github.com/benhuson/expire-users)
-* [Email Parse Shortcode](https://github.com/MissVeronica/um-email-parse-shortcode)
-* [Additional email Recipients](https://github.com/MissVeronica/um-additional-email-recipients)
+* Original [Expire Users](https://github.com/benhuson/expire-users) plugin version 1.2.2
+* [Email Parse Shortcode](https://github.com/MissVeronica/um-email-parse-shortcode) for different email content per User Role
+* [Additional email Recipients](https://github.com/MissVeronica/um-additional-email-recipients) for CC: and BCC: email addresses
 * [Index WP MySQL For Speed](https://wordpress.org/plugins/index-wp-mysql-for-speed/)
 
 ## 5. Installation and Updates
@@ -122,7 +122,8 @@ None
 * Install as new Plugin, upload the "Expire User Roles" ZIP file in WordPress -> Plugins -> Add New -> Upload Plugin.
 * Activate the "Expire User Roles" Plugin
 ### 5.2 Updates
-* 
+* Same as  5.1 First install
+
 ## 6. Support
 * [Issues](https://github.com/MissVeronica/um-expire-user-roles/issues)
 * [Discussions](https://github.com/MissVeronica/um-expire-user-roles/discussions)
