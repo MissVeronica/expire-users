@@ -20,14 +20,18 @@ class Expire_User_Settings {
 	 */
 	function register_settings() {
 		register_setting( 'expire_users_options_group', 'expire_users_default_expire_settings', array( $this, 'validate_expire_settings' ) );
-		register_setting( 'expire_users_options_group', 'expire_users_notification_message', array( $this, 'validate_email_message' ) );
-		register_setting( 'expire_users_options_group', 'expire_users_notification_admin_message', array( $this, 'validate_email_message' ) );
+		//register_setting( 'expire_users_options_group', 'expire_users_notification_message', array( $this, 'validate_email_message' ) );
+		//register_setting( 'expire_users_options_group', 'expire_users_notification_admin_message', array( $this, 'validate_email_message' ) );
 	}
 
 	/**
 	 * Validate Expire Settings
 	 */
 	function validate_expire_settings( $input ) {
+		if ( ! isset( $input['expire_timestamp'] )) {
+			$input['expire_timestamp'] = false;
+			return $input;
+		}
 		$defaults = wp_parse_args( $input['expire_timestamp'], array(
 			'mm'   => 0,
 			'dd'   => 0,
@@ -103,7 +107,8 @@ class Expire_User_Settings {
 				<p>
 					<label for="expire_user_auto_expire_registered_users">
 						<input name="expire_users_default_expire_settings[auto_expire_registered_users]" type="checkbox" id="expire_user_auto_expire_registered_users" value="Y" <?php checked( 'Y', $expire_settings['auto_expire_registered_users'] ); ?>>
-						<?php esc_html_e( 'Automatically set expiry date for new users who register via the main WordPress registration form.', 'expire-users' ); ?>
+<!--	   				<?php esc_html_e( 'Automatically set expiry date for new users who register via the main WordPress registration form.', 'expire-users' ); ?>-->
+						<?php esc_html_e( 'Activate the plugin', 'expire-users' ); ?>
 					</label>
 				</p>
 
@@ -113,7 +118,7 @@ class Expire_User_Settings {
 						<td>
 							<fieldset class="expire-user-date-options hide-if-js" style="display: block; ">
 								<legend class="screen-reader-text"><span><?php esc_html_e( 'Expiry Date', 'expire-users' ); ?></span></legend>
-								<label for="expire_user_date_type_never">
+  								<label for="expire_user_date_type_never">
 									<input name="expire_users_default_expire_settings[expire_user_date_type]" type="radio" id="expire_user_date_type_never" value="never" <?php checked( 'never', $expire_settings['expire_user_date_type'] ); ?>>
 									<?php echo esc_html_x( 'Never', 'expire date type', 'expire-users' ); ?>
 								</label><br>
@@ -124,7 +129,7 @@ class Expire_User_Settings {
 										<?php echo $expire_users->admin->date_block_menu_options( $expire_settings['expire_user_date_in_block'] ); ?>
 									</select>
 								</label><br>
-								<label for="expire_user_date_type_date">
+<!--							<label for="expire_user_date_type_date">
 									<input name="expire_users_default_expire_settings[expire_user_date_type]" type="radio" id="expire_user_date_type_date" value="on" <?php checked( 'on', $expire_settings['expire_user_date_type'] ); ?>>
 									<?php echo esc_html_x( 'On', 'expire date type', 'expire-users' ); ?> <select id="expire_users_default_expire_settings_expire_timestamp_mm" name="expire_users_default_expire_settings[expire_timestamp][mm]" tabindex="4">
 										<?php echo $expire_users->admin->month_menu_options( $month_n ); ?>
@@ -134,6 +139,7 @@ class Expire_User_Settings {
 									@ <input type="text" id="expire_users_default_expire_settings_expire_timestamp_hrs" name="expire_users_default_expire_settings[expire_timestamp][hrs]" value="<?php echo esc_attr( date( 'H', $expire_timestamp ) ); ?>" size="2" maxlength="2" tabindex="4" autocomplete="off">
 									: <input type="text" id="expire_users_default_expire_settings_expire_timestamp_min" name="expire_users_default_expire_settings[expire_timestamp][min]" value="<?php echo esc_attr( date( 'i', $expire_timestamp ) ); ?>" size="2" maxlength="2" tabindex="4" autocomplete="off">
 								</label>
+-->
 							</fieldset>
 						</td>
 					</tr>
@@ -146,7 +152,7 @@ class Expire_User_Settings {
 							</select>
 						</td>
 					</tr>
-					<tr>
+<!--				<tr>
 						<th><label for="postalcode"><?php esc_html_e( 'Expire Actions', 'expire-users' ); ?></label></th>
 						<td>
 							<fieldset>
@@ -190,14 +196,17 @@ class Expire_User_Settings {
 							</fieldset>
 						</td>
 					</tr>
+-->
 				</table>
 
-				<h3><?php esc_html_e( 'Notification Emails', 'expire-users' ); ?></h3>
+<!--			<h3><?php esc_html_e( 'Notification Emails', 'expire-users' ); ?></h3>
 				<p><?php esc_html_e( 'These emails are sent if you have checked the checkboxes on a user\'s profile.', 'expire-users' ); ?><br />
 					<?php esc_html_e( 'You may use the following placeholders in the notification email messages below:', 'expire-users' ); ?></p>
 				<p><code>%%expirydate%%</code> <code>%%username%%</code> <code>%%name%%</code> <code>%%sitename%%</code></p>
 				<?php Expire_User_Notifications_Admin::admin_table(); ?>
-
+-->
+				
+        		<h3><a href="<?php echo esc_url( get_admin_url() . 'admin.php?page=um_roles' ); ?>"><?php echo esc_html__( 'Additional settings for each non-admin User Role', 'expire-users' ); ?></a></h3>
 				<p class="submit"><input type="submit" value="<?php esc_attr_e( 'Save Options', 'expire-users' ); ?>" class="button button-primary" /></p>
 
 			</form>
@@ -208,3 +217,4 @@ class Expire_User_Settings {
 	}
 
 }
+
