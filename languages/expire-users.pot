@@ -73,7 +73,7 @@ msgstr ""
 
 #: includes/um-expire-user-roles.php:1214
 #, php-format
-msgid "%s Reminder emails will be sent during the nect 24 hours"
+msgid "%s Reminder emails will be sent during the next 24 hours"
 msgstr ""
 
 #: includes/um-expire-user-roles.php:1191
