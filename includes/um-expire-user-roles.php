@@ -1211,7 +1211,7 @@ class UM_Expire_Users {
             </td></tr>
             <tr><td style="padding-left: 8px">
             <?php
-                echo sprintf( esc_html__( '%s Reminder emails will be sent during the nect 24 hours', 'expire-users' ), $this->count_reminder_emails( 1 ) );
+                echo sprintf( esc_html__( '%s Reminder emails will be sent during the next 24 hours', 'expire-users' ), $this->count_reminder_emails( 1 ) );
             ?>
             </td></tr>
         </table>
