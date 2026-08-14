@@ -1231,7 +1231,7 @@ class UM_Expire_Users {
                 <div class="alignleft um-filter-by-status">
                 <label class="screen-reader-text" for="um_filter_expire_users"><?php esc_html_e( 'Expire Users', 'expire-users' ); ?></label>
                 <select name="um_expire_users" id="um_expire_users">
-                    <option value=""><?php esc_html_e( 'UM Expire Users', 'expire-users' )?></option>
+                    <option value=""><?php esc_html_e( 'UM Expire User Roles', 'expire-users' )?></option>
                     <option value="1"<?php echo $selected[1]?>><?php esc_html_e( 'User Roles not expired', 'expire-users' )?></option>
                     <option value="2"<?php echo $selected[2]?>><?php esc_html_e( 'User Roles expired', 'expire-users' )?></option>
                 </select>
