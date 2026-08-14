@@ -56,7 +56,7 @@ These placeholders are only valid for the 5 email templates used by this plugin.
 * Expired User's [Account page](https://imgur.com/a/UiCZJat)
 
 ### 2.3 UM Dashboard
-Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM Dashboard](https://imgur.com/a/Gviz1mO)
+Information at [UM Dashboard](https://imgur.com/a/Rvu8BvL) 
 * Next WP Cronjob scheduled at %s
 * All User Expiration Roles
 * %s Users are not expired - %s Users are not expired incl %d Users are pending to be expired
