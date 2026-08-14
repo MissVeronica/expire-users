@@ -1,5 +1,5 @@
 # UM - Expire User Roles - Version 2.0.0 BETA
- Extension to Ultimate Member for User Roles Expiration based on an updated version of the <a href="https://github.com/MissVeronica/expire-users-um" target="_blank">Expire Users</a> plugin.
+ Extension to Ultimate Member for User Roles Expiration based on an updated version of the [Expire Users](https://github.com/benhuson/expire-users) plugin.
 
 Support for:
 * User Role selections to be included each with own settings 
@@ -14,8 +14,7 @@ Support for:
 
 ## 1. Settings
 ### 1.1 Wordpress All Users -> Expire settings
-* [Screen copy](https://imgur.com/a/F9Fnr9h)
-*  Automatically set expiry date for new users who register via the main WordPress registration form. - To enable the page settings
+*  Plugin activation to enable the page settings and UM Role settings
 *  Expiry Date - Select your time period in number of days, weeks, months or years
 *  On Expire, Default to Role - Select your User Role for hosting of expired User Roles
 
@@ -51,8 +50,8 @@ These placeholders are only valid for the 5 email templates used by this plugin.
 * {expiration-role} - Expiration User Role name  
         
 ### 2.2 User Account Page
-* Active User's [Account page](https://imgur.com/a/rZPeTc0)
-* Expired User's [Account page](https://imgur.com/a/tuGjDRO)
+* Active User's [Account page](https://imgur.com/a/rvBNIop)
+* Expired User's [Account page](https://imgur.com/a/UiCZJat)
 
 ### 2.3 UM Dashboard
 Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM Dashboard](https://imgur.com/a/Gviz1mO)
