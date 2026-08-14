@@ -70,7 +70,7 @@ Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM D
 * "Expire Date" column sortable ascending/descending with expired times in red color
 * User dropdown per User not expired with action "Expire Now"
 * User dropdown per User with action "Renew Now" for active, expired and inactive Users
-* Filter for listing "Users not expired" and "Users expired"
+* Filter "UM Expire User Roles" for listing of "Users not expired" and "Users expired"
 
 ### 2.5 Shortcodes
 Displays the expiry date for the current user.
