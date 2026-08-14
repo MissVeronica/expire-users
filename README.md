@@ -64,7 +64,7 @@ Information at [UM Dashboard](https://imgur.com/a/Rvu8BvL)
 * No Users are pending - %d Users are pending to be expired by the next WP Cronjob or WP All Users list
 * %s Users may expire during next 24 hours
 * %s Users may expire during next 7 days
-* %s Reminder emails will be sent during the nect 24 hours
+* %s Reminder emails will be sent during the next 24 hours
 
 ### 2.4 WP All Users
 * "Expire Date" column sortable ascending/descending with expired times in red color
