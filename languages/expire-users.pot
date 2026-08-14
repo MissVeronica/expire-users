@@ -1,11 +1,12 @@
 # Copyright (C) 2013 Expire Users
 # This file is distributed under the same license as the Expire Users package.
 #, fuzzy
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Member - Expire User Roles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 14:08+0000\n"
+"POT-Creation-Date: 2026-08-14 15:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -737,7 +738,7 @@ msgid "Ultimate Member - Expire User Roles"
 msgstr ""
 
 #: includes/um-expire-user-roles.php:1234
-msgid "UM Expire Users"
+msgid "UM Expire User Roles"
 msgstr ""
 
 #: includes/um-expire-user-roles.php:883
