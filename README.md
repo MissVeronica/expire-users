@@ -14,8 +14,8 @@ Support for:
 
 ## 1. Settings
 ### 1.1 Wordpress All Users -> Expire settings
-*  Plugin activation to enable the page settings and UM Role settings
-*  Expiry Date - Select your time period in number of days, weeks, months or years
+*  Plugin activation to enable the Plugin activation and settings and UM Role settings
+*  Expiry Date - Select your time period in number of Days, Weeks, Months or Years
 *  On Expire, Default to Role - Select your User Role for hosting of expired User Roles
 
 ### 1.2 UM User Roles -> edit an User Role
@@ -36,7 +36,7 @@ New template HTML sources are copied by the plugin to your active theme's local 
 * Expire Users - Admin about User Role Expired = If template is active an email is sent to the Site Admin about an User Role being expired.
 * Expire Users - Admin about User Role Renewal = If template is active an email is sent to the Site Admin about a renewal by an Account with Expired User Role or via WP All Users backend renewal.
 
-## 2. Plugin functions
+## 2. Supported Plugin functions
 ### 2.1 Placeholders
 UM [email placeholders](https://docs.ultimatemember.com/article/1340-placeholders-for-email-templates) are valid. 
 
@@ -65,7 +65,7 @@ Information at [UM Dashboard](https://imgur.com/a/OlT2w55) and all options [UM D
 * %s Reminder emails will be sent during the nect 24 hours
 
 ### 2.4 WP All Users
-* Expire Date column sortable
+* Expire Date column sortable ascending/descending
 * User dropdown per User not expired with action "Expire Now"
 * User dropdown per User with action "Renew Now" for active, expired and inactive Users
 * Filter for listing "Users not expired" and "Users expired"
@@ -89,13 +89,14 @@ Allowed Attributes:
 - expired
 - never_expire
 
-Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</code>
+* Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</code>
+* A combination of both shortcodes is used for the first line of the User Account page.
 
 ### 2.6 Cron job
-* The "Expire Users" file cron.php is updated by "User Role Expiration" during activation to include calls required for the integration.
+* The "Expire Users" cronjob is searching database for Expired Users and Users to send Reminders to either hourly for Days and Weeks time periods or twice daily for Months and Years time periods
 
 ### 2.7 Translations & Text changes
-* Available are local language files ( FR, NL, IT, BR ) for the original "Expire Users" plugin are downloaded and installed with the plugin
+* Available translations are local language files ( FR, NL, IT, BR ) for the original "Expire Users" plugin which are downloaded and installed with the plugin
 * [WP Translations](https://translate.wordpress.org/projects/wp-plugins/expire-users/)
 * Plugin text domain - expire-users - for the "[Loco Translate](https://wordpress.org/plugins/loco-translate/)" plugin or the "[Say What?](https://wordpress.org/plugins/say-what/)" plugin 
 
@@ -105,7 +106,7 @@ Source file <code>.../plugins/expire-users-um-master/includes/shortcodes.php</co
 * <code>_expire_user_settings</code> Current settings array for this User
 * <code>_expire_users_role</code> Main Role ID ie returning User Role at renewal
 * <code>expire_users_reminder</code> The User setting at the Account page for a Reminder email yes/no
-* <code>_expire_users_reminder</code> Timestamp for sending a Reminder email. Empty after Reminder email sent.
+* <code>_expire_users_reminder</code> Timestamp for sending a Reminder email. Empty/removed after Reminder email sent.
 
 ## 3. Updates
 None
