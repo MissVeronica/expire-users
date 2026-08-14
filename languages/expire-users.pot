@@ -1,7 +1,6 @@
 # Copyright (C) 2013 Expire Users
 # This file is distributed under the same license as the Expire Users package.
 #, fuzzy
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Member - Expire User Roles\n"
