@@ -13,6 +13,7 @@ class UM_Expire_Users {
     public $role_meta_cache_slug = array();
     public $role_meta_cache_uid  = array();
     public $user_status_cache    = array();
+    public $non_admin_roles      = array();
 
     public $current_role_id        = false;
     public $priority_role_id       = false;
@@ -26,6 +27,8 @@ class UM_Expire_Users {
     public $time_format            = 'H:i';
 
     public $role_exclude_setting = '';
+
+    public $admin_caps = array( 'manage_options', 'update_core', 'administrator' );
 
     public $templates = array(  'welcome'    => 'expire_users_welcome_email',
                                 'reminder' => 'expire_users_reminder_email',
@@ -388,34 +391,35 @@ class UM_Expire_Users {
         return $output;
     }
 
-    public function get_role_capabilities() {
+    public function get_non_admin_roles() {
 
-        if ( isset( $this->role_meta['name'] ) && ! empty( $this->role_meta['name'] ) ) {
+        global $wp_roles;
 
-            if ( $this->role_exclude_setting == '' || $this->role_meta['name'] == $this->role_exclude_setting ) {
+        if ( ! isset( $wp_roles )) {
+            $wp_roles = new WP_Roles();
+        }
 
-                return false;
+        foreach ( $wp_roles->roles as $role_key => $role_details ) {
+
+            $is_admin = false;
+            if ( $role_key === 'administrator' || $role_key === 'super_admin') {
+                $is_admin = true;
 
             } else {
- 
-                $this->role_meta['wp_capabilities'] = get_role( $this->get_role_id_by_role_name( $this->role_meta['name'] ))->capabilities;
-                if ( isset( $this->role_meta['wp_capabilities']) && array_key_exists( 'manage_options', $this->role_meta['wp_capabilities']) && $this->role_meta['wp_capabilities']['manage_options'] == 1 ) {
-             
-                    return false;
+                foreach ( $this->admin_caps as $cap ) {
+                    if ( ! empty( $role_details['capabilities'][$cap])) {
+                        $is_admin = true;
+                        break;
+                    }
                 }
             }
 
-        } else {
-
-            return false;
-        }
-        
-        if ( ! isset( $this->role_meta['_expire_users_role_selected'] ) || $this->role_meta['_expire_users_role_selected'] != 1 ) {
-
-            return false;
+            if ( ! $is_admin ) {
+                $this->non_admin_roles[$role_key] = array( 'name' => $role_details['name']);
+            }
         }
 
-        return true;
+        return $this->non_admin_roles;
     }
 
     public function customtab_expire_users( $user_id, $changes ) {
@@ -430,7 +434,7 @@ class UM_Expire_Users {
                 if ( isset( $changes['expire_users'] ) && $changes['expire_users'] == 'auto' ) {
                     if ( $this->user_expire_status( $user_id ) == 'expired' ) {
 
-                        if ( $this->get_role_capabilities() !== false ) {
+                        if ( array_key_exists( um_user( '_expire_users_role' ), $this->get_non_admin_roles()) ) {
 
                             UM()->roles()->set_role( $user_id, um_user( '_expire_users_role' ) );
                             $expire_users->user_register( $user_id );
@@ -783,15 +787,16 @@ class UM_Expire_Users {
     public function admin_role_metaboxes_expire_users( $roles_metaboxes ) {
 
         if ( $this->get_default_expire_settings()) {
-                
+
             $roles_metaboxes[] = array(
                                         'id'       => 'um-admin-form-account-role-expiration',
-                                        'title'    => esc_html__( 'User Role Expiration', 'expire-users' ),
+                                        'title'    => esc_html__( 'Expire User Roles', 'expire-users' ),
                                         'callback' => array( $this, 'expire_users_metabox_callback' ),
                                         'screen'   => 'um_role_meta',
                                         'context'  => 'normal',
                                         'priority' => 'default',
             );
+            $this->get_non_admin_roles();
         }
         return $roles_metaboxes;
     }
@@ -800,34 +805,23 @@ class UM_Expire_Users {
 
         $role_data = $object['data'];
 
-        if ( ! isset( $role_data['_um_is_custom'] ) || $role_data['_um_is_custom'] == 0 ) {
-            if ( ! isset( $role_data['name'] ) || empty( $role_data['name'] )) {
-                echo
-                    '<div class="um-admin-metabox">' .
-                    esc_html__( 'Role Name not found.', 'expire-users' ) ,
-                    '</div>';
-                return;
-            }
-            $role_data['wp_capabilities'] = get_role( $this->get_role_id_by_role_name( $role_data['name'] ) )->capabilities;
-        }
-
-        if ( isset( $role_data['wp_capabilities']) && array_key_exists( 'manage_options', $role_data['wp_capabilities']) && $role_data['wp_capabilities']['manage_options'] == 1 ) {
+        if ( ! array_key_exists( $this->get_role_id_by_role_name( $role_data['name'] ), $this->non_admin_roles )) {
             echo
                 '<div class="um-admin-metabox">' .
-                esc_html__( 'Administrator User Roles are excluded from the UM User Role Expiration plugin settings.', 'expire-users' ) ,
+                esc_html__( 'This User Role is excluded (Admin capabilities) from the UM Expire User Roles plugin settings.', 'expire-users' ) ,
                 '</div>';
             return;
         }
-        
+
         if ( $this->role_exclude_setting == '' || $role_data['name'] == $this->role_exclude_setting ) {
             echo
                 '<div class="um-admin-metabox">' .
-                esc_html__( 'Expire Users default Role is excluded from the UM User Role Expiration plugin settings.', 'expire-users' ) ,
+                esc_html__( 'Expire Users default Role is excluded from the UM Expire User Roles plugin settings.', 'expire-users' ) ,
                 '</div>';
             return;
         }
 
-        $day  = esc_html__( '%s day', 'expire-users' );
+        $day  = esc_html__( '%s day',  'expire-users' );
         $days = esc_html__( '%s days', 'expire-users' );
 
         $reminder_days = array( '1' => sprintf( $day, '1' ),
@@ -857,8 +851,8 @@ class UM_Expire_Users {
                                                     array(
                                                         'id'      => '_expire_users_role_selected',
                                                         'type'    => 'checkbox',
-                                                        'label'   => esc_html__( 'Include this Role in User Role Expiration?', 'expire-users' ),
-                                                        'tooltip' => esc_html__( 'Activate the "Expire Users" plugin\'s UM integration for this User Role.', 'expire-users' ),
+                                                        'label'   => esc_html__( 'Include this Role in Expire User Roles?', 'expire-users' ),
+                                                        'tooltip' => esc_html__( 'Activate the "Expire User Roles" plugin for this User Role.', 'expire-users' ),
                                                         'value'   => isset( $role_data['_expire_users_role_selected'] ) ? $role_data['_expire_users_role_selected'] : '0',
                                                         ),
                                                     array(
@@ -899,7 +893,7 @@ class UM_Expire_Users {
                                                         'label'       => esc_html__( 'User Reminder email number of days in advance?', 'expire-users' ),
                                                         'tooltip'     => esc_html__( 'Select the number of days between 1 and 14.', 'expire-users' ),
                                                         'options'     => $reminder_days,
-                                                        'size'        => 'small',
+                                                        'size'        => 'medium',
                                                         'value'       => isset( $role_data['_expire_users_reminder_days'] ) ? $role_data['_expire_users_reminder_days'] : 0,
                                                         'conditional' => array( '_expire_users_reminder', '=', '1' ),
                                                      ),
