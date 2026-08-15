@@ -22,7 +22,7 @@ Support for:
 
 ### 1.2 UM User Roles -> edit an User Role
 Roles with Admin capabilities are excluded and the "On Expire, Default to Role" set by the "Expire Users# plugin
-* Include this Role in User Role Expiration? - Activate the "Expire Users" plugin's UM integration for this User Role.
+* Include this Role in User Role Expiration? - Activate the "Expire User Roles" plugin for this User Role.
 * Include Users during Registration? - New Users registered are included. Avoid this option, use the Login option instead, if you have email address confirmation or Admin approval for new Users. No email is sent, include info in your welcome email.
 * Include an existing User at their next/first login? - Existing Users with this Role and without a free period are included at their next/first login and an email login notification is sent if enabled.
 * Update the Expiration date at each User login? - A new Free User Role Expiration period is started at each User login. No User email login notification is sent for this option.
