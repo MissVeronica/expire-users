@@ -76,6 +76,8 @@ class Expire_User_Settings {
 	 */
 	function options_page() {
 		global $expire_users, $wp_version;
+		global $um_expire_users;
+
 		if ( ! isset( $_REQUEST['updated'] ) ) {
 			$_REQUEST['updated'] = false;
 		}
@@ -148,7 +150,7 @@ class Expire_User_Settings {
 						<td>
 							<select name="expire_users_default_expire_settings[expire_user_role]" id="expire_user_role">
 								<option value="" <?php selected( '', $expire_settings['expire_user_role'] ); ?>><?php esc_html_e( 'Don\'t change role', 'expire-users' ); ?></option>
-								<?php wp_dropdown_roles( $expire_settings['expire_user_role'] ); ?>
+								<?php wp_dropdown_roles( $expire_settings['expire_user_role'], $um_expire_users->get_non_admin_roles() ); ?>
 							</select>
 						</td>
 					</tr>
@@ -217,4 +219,5 @@ class Expire_User_Settings {
 	}
 
 }
+
 
