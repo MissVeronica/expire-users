@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Member - Expire User Roles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-15 21:21+0000\n"
+"POT-Creation-Date: 2026-08-15 22:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -474,7 +474,7 @@ msgid "Include an existing User at their next/first login?"
 msgstr ""
 
 #: includes/um-expire-user-roles.php:854
-msgid "Include this Role in Expire User Roles?"
+msgid "Include this Role in \"Expire User Roles\"?"
 msgstr ""
 
 #: includes/um-expire-user-roles.php:861
@@ -862,6 +862,11 @@ msgstr ""
 #: includes/um-expire-user-roles.php:323 includes/um-expire-user-roles.php:335
 #, php-format
 msgid "Your User Role %s will Never Expire"
+msgstr ""
+
+#: includes/um-expire-user-roles.php:367
+#, php-format
+msgid "Your User Role name now is %s"
 msgstr ""
 
 #: includes/um-expire-user-roles.php:367
