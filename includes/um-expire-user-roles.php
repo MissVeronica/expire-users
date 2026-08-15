@@ -851,7 +851,7 @@ class UM_Expire_Users {
                                                     array(
                                                         'id'      => '_expire_users_role_selected',
                                                         'type'    => 'checkbox',
-                                                        'label'   => esc_html__( 'Include this Role in Expire User Roles?', 'expire-users' ),
+                                                        'label'   => esc_html__( 'Include this Role in "Expire User Roles"?', 'expire-users' ),
                                                         'tooltip' => esc_html__( 'Activate the "Expire User Roles" plugin for this User Role.', 'expire-users' ),
                                                         'value'   => isset( $role_data['_expire_users_role_selected'] ) ? $role_data['_expire_users_role_selected'] : '0',
                                                         ),
@@ -1325,3 +1325,4 @@ class UM_Expire_Users {
 
 global $um_expire_users;
 $um_expire_users = new UM_Expire_Users();
+
