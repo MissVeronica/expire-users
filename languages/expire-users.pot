@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Ultimate Member - Expire User Roles\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-08-14 15:51+0000\n"
+"POT-Creation-Date: 2026-08-15 21:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -18,80 +18,80 @@ msgstr ""
 "X-Loco-Version: 2.8.8; wp-7.0.4; php-8.5.8\n"
 "X-Domain: expire-users"
 
-#: includes/um-expire-user-roles.php:1185
+#: includes/um-expire-user-roles.php:1179
 #, php-format
 msgid "%15s Users are not expired incl %25d Users are pending to be expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:216
+#: includes/um-expire-user-roles.php:219
 msgid "%d day"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:228
+#: includes/um-expire-user-roles.php:231
 msgid "%d days"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:218
+#: includes/um-expire-user-roles.php:221
 msgid "%d month"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:230
+#: includes/um-expire-user-roles.php:233
 msgid "%d months"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1198
+#: includes/um-expire-user-roles.php:1192
 msgid ""
 "%d Users are pending to be expired by the next WP Cronjob or WP All Users "
 "list"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:217
+#: includes/um-expire-user-roles.php:220
 msgid "%d week"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:229
+#: includes/um-expire-user-roles.php:232
 msgid "%d weeks"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:219
+#: includes/um-expire-user-roles.php:222
 msgid "%d year"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:231
+#: includes/um-expire-user-roles.php:234
 msgid "%d years"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:240 includes/um-expire-user-roles.php:830
+#: includes/um-expire-user-roles.php:243 includes/um-expire-user-roles.php:824
 #, php-format
 msgid "%s day"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:241 includes/um-expire-user-roles.php:831
+#: includes/um-expire-user-roles.php:244 includes/um-expire-user-roles.php:825
 #, php-format
 msgid "%s days"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1214
+#: includes/um-expire-user-roles.php:1208
 #, php-format
 msgid "%s Reminder emails will be sent during the next 24 hours"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1191
+#: includes/um-expire-user-roles.php:1185
 #, php-format
 msgid "%s Users are expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1184
+#: includes/um-expire-user-roles.php:1178
 #, php-format
 msgid "%s Users are not expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1204
+#: includes/um-expire-user-roles.php:1198
 #, php-format
 msgid "%s Users may expire during next 24 hours"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1209
+#: includes/um-expire-user-roles.php:1203
 #, php-format
 msgid "%s Users may expire during next 7 days"
 msgstr ""
@@ -152,23 +152,23 @@ msgid ""
 "the registration form.</p>"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:690
+#: includes/um-expire-user-roles.php:694
 msgid "[{site_name}] User Role Expiration Reminder"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:680
+#: includes/um-expire-user-roles.php:684
 msgid "[{site_name}] User Role Expiration Welcome"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:700 includes/um-expire-user-roles.php:710
+#: includes/um-expire-user-roles.php:704 includes/um-expire-user-roles.php:714
 msgid "[{site_name}] User Role Expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:720
+#: includes/um-expire-user-roles.php:724
 msgid "[{site_name}] User Role Renewal"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:884
+#: includes/um-expire-user-roles.php:878
 msgid ""
 "A new Free User Role Expiration period is started at each User login. No "
 "User email login notification is sent for this option."
@@ -181,30 +181,23 @@ msgid ""
 "%%expirydate%%"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:861
-msgid ""
-"Activate the \"Expire Users\" plugin's UM integration for this User Role."
+#: includes/um-expire-user-roles.php:855
+msgid "Activate the \"Expire User Roles\" plugin for this User Role."
 msgstr ""
 
-#: admin/settings.php:111
+#: admin/settings.php:113
 msgid "Activate the plugin"
 msgstr ""
 
-#: admin/settings.php:209
+#: admin/settings.php:211
 msgid "Additional settings for each non-admin User Role"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:87
+#: includes/um-expire-user-roles.php:90
 msgid "Additional settings per User Role"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:817
-msgid ""
-"Administrator User Roles are excluded from the UM User Role Expiration "
-"plugin settings."
-msgstr ""
-
-#: includes/um-expire-user-roles.php:1178
+#: includes/um-expire-user-roles.php:1172
 msgid "All User Expiration Roles"
 msgstr ""
 
@@ -216,7 +209,7 @@ msgstr ""
 msgid "Aug"
 msgstr ""
 
-#: admin/settings.php:110
+#: admin/settings.php:112
 msgid ""
 "Automatically set expiry date for new users who register via the main "
 "WordPress registration form."
@@ -226,11 +219,11 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:265
+#: includes/um-expire-user-roles.php:268
 msgid "Confirm User Role Expiration date renewal"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:268
+#: includes/um-expire-user-roles.php:271
 #, php-format
 msgid "Confirm User Role Expiration date renewal by %s"
 msgstr ""
@@ -251,7 +244,7 @@ msgstr ""
 msgid "Documentation"
 msgstr ""
 
-#: admin/settings.php:150 admin/expire-user.php:269
+#: admin/settings.php:152 admin/expire-user.php:269
 msgid "Don't change role"
 msgstr ""
 
@@ -259,7 +252,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: admin/settings.php:172 admin/settings.php:175 admin/expire-user.php:292
+#: admin/settings.php:174 admin/settings.php:177 admin/expire-user.php:292
 #: admin/expire-user.php:295
 msgid "Email Notifications"
 msgstr ""
@@ -268,13 +261,13 @@ msgstr ""
 msgid "ERROR:"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:876
+#: includes/um-expire-user-roles.php:870
 msgid ""
 "Existing Users with this Role and without a free period are included at "
 "their next/first login and an email login notification is sent if enabled."
 msgstr ""
 
-#: admin/settings.php:156 admin/settings.php:159 admin/expire-user.php:276
+#: admin/settings.php:158 admin/settings.php:161 admin/expire-user.php:276
 #: admin/expire-user.php:279
 msgid "Expire Actions"
 msgstr ""
@@ -283,17 +276,17 @@ msgstr ""
 msgid "Expire Date"
 msgstr ""
 
-#: admin/settings.php:127
+#: admin/settings.php:129
 msgctxt "expire date type"
 msgid "In"
 msgstr ""
 
-#: admin/settings.php:123
+#: admin/settings.php:125
 msgctxt "expire date type"
 msgid "Never"
 msgstr ""
 
-#: admin/settings.php:134
+#: admin/settings.php:136
 msgctxt "expire date type"
 msgid "On"
 msgstr ""
@@ -306,45 +299,46 @@ msgstr ""
 msgid "Expire Settings"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:87 includes/um-expire-user-roles.php:1038
+#: includes/um-expire-user-roles.php:90 includes/um-expire-user-roles.php:793
+#: includes/um-expire-user-roles.php:1032
 msgid "Expire User Roles"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:84 includes/um-expire-user-roles.php:1232
+#: includes/um-expire-user-roles.php:87 includes/um-expire-user-roles.php:1226
 msgid "Expire Users"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:706
+#: includes/um-expire-user-roles.php:710
 msgid "Expire Users - Admin about User Role Expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:716
+#: includes/um-expire-user-roles.php:720
 msgid "Expire Users - Admin about User Role Renewal"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:686
+#: includes/um-expire-user-roles.php:690
 msgid "Expire Users - User Reminder"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:696
+#: includes/um-expire-user-roles.php:700
 msgid "Expire Users - User Role Expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:676
+#: includes/um-expire-user-roles.php:680
 msgid "Expire Users - User Welcome"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:825
+#: includes/um-expire-user-roles.php:819
 msgid ""
-"Expire Users default Role is excluded from the UM User Role Expiration "
-"plugin settings."
+"Expire Users default Role is excluded from the UM Expire User Roles plugin "
+"settings."
 msgstr ""
 
 #: admin/help.php:81
 msgid "Expire Users Plugin"
 msgstr ""
 
-#: admin/settings.php:87
+#: admin/settings.php:89
 msgid "Expire Users Settings"
 msgstr ""
 
@@ -367,7 +361,7 @@ msgstr ""
 msgid "Expired %s ago"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:370
+#: includes/um-expire-user-roles.php:373
 #, php-format
 msgid "Expired User Role name is %s"
 msgstr ""
@@ -392,7 +386,7 @@ msgstr ""
 msgid "Expires: %s"
 msgstr ""
 
-#: admin/settings.php:117 admin/settings.php:120 admin/expire-user.php:236
+#: admin/settings.php:119 admin/settings.php:122 admin/expire-user.php:236
 msgid "Expiry Date"
 msgstr ""
 
@@ -411,7 +405,7 @@ msgstr ""
 msgid "Feb"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1238
+#: includes/um-expire-user-roles.php:1232
 msgid "Filter"
 msgstr ""
 
@@ -419,7 +413,7 @@ msgstr ""
 msgid "GitHub"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:940
+#: includes/um-expire-user-roles.php:934
 msgid "Hourly"
 msgstr ""
 
@@ -431,41 +425,41 @@ msgstr ""
 msgid "https://github.com/MissVeronica/um-expire-user-roles"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:910
+#: includes/um-expire-user-roles.php:904
 msgid "If empty the default UM admin email address will be used."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:892
+#: includes/um-expire-user-roles.php:886
 msgid ""
 "If selected Users may also enable/disable this option at their Account page "
 "tab for User Role Expiration."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:717
+#: includes/um-expire-user-roles.php:721
 msgid ""
 "If template is active an email is sent to the Site Admin about a renewal by "
 "an Account with Expired User Role or via WP All Users backend renewal."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:707
+#: includes/um-expire-user-roles.php:711
 msgid ""
 "If template is active an email is sent to the Site Admin about an User Role "
 "being expired."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:687
+#: includes/um-expire-user-roles.php:691
 msgid ""
 "If template is active an email is sent to the user as a Reminder of the "
 "upcoming User Role Expiration."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:697
+#: includes/um-expire-user-roles.php:701
 msgid ""
 "If template is active an email is sent to the User when the User Role is "
 "expired."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:677
+#: includes/um-expire-user-roles.php:681
 msgid ""
 "If template is active email is sent to user when included in User Role "
 "Expiration during login or backend renewal."
@@ -475,15 +469,15 @@ msgstr ""
 msgid "In"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:875
+#: includes/um-expire-user-roles.php:869
 msgid "Include an existing User at their next/first login?"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:860
-msgid "Include this Role in User Role Expiration?"
+#: includes/um-expire-user-roles.php:854
+msgid "Include this Role in Expire User Roles?"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:867
+#: includes/um-expire-user-roles.php:861
 msgid "Include Users during Registration?"
 msgstr ""
 
@@ -537,22 +531,22 @@ msgstr ""
 msgid "Never Expire"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:868
+#: includes/um-expire-user-roles.php:862
 msgid ""
 "New Users registered are included. Avoid this option, use the Login option "
 "instead, if you have email address confirmation or Admin approval for new "
 "Users. No email is sent, include info in your welcome email."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1159
+#: includes/um-expire-user-roles.php:1153
 #, php-format
 msgid "Next WP Cronjob scheduled at %s"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:256 includes/um-expire-user-roles.php:294
-#: includes/um-expire-user-roles.php:1091
-#: includes/um-expire-user-roles.php:1121
-#: includes/um-expire-user-roles.php:1147
+#: includes/um-expire-user-roles.php:259 includes/um-expire-user-roles.php:297
+#: includes/um-expire-user-roles.php:1085
+#: includes/um-expire-user-roles.php:1115
+#: includes/um-expire-user-roles.php:1141
 msgid "No"
 msgstr ""
 
@@ -560,15 +554,15 @@ msgstr ""
 msgid "No notification defined."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:356
+#: includes/um-expire-user-roles.php:359
 msgid "No reminder email"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1197
+#: includes/um-expire-user-roles.php:1191
 msgid "No Users are pending"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:275
+#: includes/um-expire-user-roles.php:278
 msgid "No, keep current date"
 msgstr ""
 
@@ -576,7 +570,7 @@ msgstr ""
 msgid "Notification"
 msgstr ""
 
-#: admin/settings.php:202
+#: admin/settings.php:204
 msgid "Notification Emails"
 msgstr ""
 
@@ -592,95 +586,91 @@ msgstr ""
 msgid "On"
 msgstr ""
 
-#: admin/settings.php:147 admin/expire-user.php:265
+#: admin/settings.php:149 admin/expire-user.php:265
 msgid "On Expire, Default to Role"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:909
+#: includes/um-expire-user-roles.php:903
 msgid "Optional Admin email address?"
 msgstr ""
 
-#: admin/settings.php:91
+#: admin/settings.php:93
 msgid "Options saved"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:84
+#: includes/um-expire-user-roles.php:87
 msgid "Plugin basic settings"
 msgstr ""
 
-#: admin/settings.php:106
+#: admin/settings.php:108
 msgid "Registered User Expiry Settings"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:354
+#: includes/um-expire-user-roles.php:357
 msgid "Reminder email sent"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:353
+#: includes/um-expire-user-roles.php:356
 #, php-format
 msgid "Reminder email will be sent to you %s"
 msgstr ""
 
-#: admin/settings.php:166 admin/expire-user.php:286
+#: admin/settings.php:168 admin/expire-user.php:286
 msgid "Remove expiry details and allow user to continue to login"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:288
+#: includes/um-expire-user-roles.php:291
 #, php-format
 msgid "Renew my User Account with my previous User Role. %s"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1285
+#: includes/um-expire-user-roles.php:1279
 msgid "Renew Now"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:109 includes/um-expire-user-roles.php:641
+#: includes/um-expire-user-roles.php:112 includes/um-expire-user-roles.php:645
 #, php-format
 msgid "Renew User Role %s"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:284
+#: includes/um-expire-user-roles.php:287
 msgid "Renew User Role Expiration schedule"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:287
+#: includes/um-expire-user-roles.php:290
 #, php-format
 msgid "Renew User Role Expiration schedule by %s"
 msgstr ""
 
-#: admin/settings.php:162 admin/expire-user.php:282
+#: admin/settings.php:164 admin/expire-user.php:282
 msgid "Replace user's password with a randomly generated one"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1165
+#: includes/um-expire-user-roles.php:1159
 #, php-format
 msgid ""
 "Retry! No active WP Cronjob found for this hook \"%s\". Reactivate the "
 "\"Expire Users for UM\" plugin."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:807
-msgid "Role Name not found."
-msgstr ""
-
-#: admin/settings.php:210
+#: admin/settings.php:212
 msgid "Save Options"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:900
+#: includes/um-expire-user-roles.php:894
 msgid "Select the number of days between 1 and 14."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:891
+#: includes/um-expire-user-roles.php:885
 msgid "Send an User Reminder email before Expiration day?"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:249
+#: includes/um-expire-user-roles.php:252
 #, php-format
 msgid "Send me a Reminder email %s in advance?"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:246
+#: includes/um-expire-user-roles.php:249
 msgid "Send User Reminder email in advance?"
 msgstr ""
 
@@ -700,21 +690,21 @@ msgstr ""
 msgid "Support Forum"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:237
+#: includes/um-expire-user-roles.php:240
 #, php-format
 msgid "The extension is by %s from today."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1160
+#: includes/um-expire-user-roles.php:1154
 #, php-format
 msgid "The WP Cronjob is in a queue to be serviced since %s"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1162
+#: includes/um-expire-user-roles.php:1156
 msgid "The WP Cronjob is in a queue waiting for immediate service"
 msgstr ""
 
-#: admin/settings.php:203
+#: admin/settings.php:205
 msgid ""
 "These emails are sent if you have checked the checkboxes on a user's profile."
 msgstr ""
@@ -728,7 +718,13 @@ msgid ""
 "This email is sent to the WordPress admin email address when a user expires."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:935
+#: includes/um-expire-user-roles.php:811
+msgid ""
+"This User Role is excluded (Admin capabilities) from the UM Expire User "
+"Roles plugin settings."
+msgstr ""
+
+#: includes/um-expire-user-roles.php:929
 msgid "Twice daily"
 msgstr ""
 
@@ -736,15 +732,15 @@ msgstr ""
 msgid "Ultimate Member - Expire User Roles"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1234
+#: includes/um-expire-user-roles.php:1228
 msgid "UM Expire User Roles"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:883
+#: includes/um-expire-user-roles.php:877
 msgid "Update the Expiration date at each User login?"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:98 includes/um-expire-user-roles.php:642
+#: includes/um-expire-user-roles.php:101 includes/um-expire-user-roles.php:646
 msgid "Update User Role"
 msgstr ""
 
@@ -760,23 +756,23 @@ msgstr ""
 msgid "User Expiry Information"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:899
+#: includes/um-expire-user-roles.php:893
 msgid "User Reminder email number of days in advance?"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:97 includes/um-expire-user-roles.php:789
+#: includes/um-expire-user-roles.php:100
 msgid "User Role Expiration"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:108
+#: includes/um-expire-user-roles.php:111
 msgid "User Role Expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1236
+#: includes/um-expire-user-roles.php:1230
 msgid "User Roles expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:1235
+#: includes/um-expire-user-roles.php:1229
 msgid "User Roles not expired"
 msgstr ""
 
@@ -792,26 +788,26 @@ msgstr ""
 msgid "years"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:255 includes/um-expire-user-roles.php:293
+#: includes/um-expire-user-roles.php:258 includes/um-expire-user-roles.php:296
 msgid "Yes"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:274
+#: includes/um-expire-user-roles.php:277
 msgid "Yes, I confirm a new date"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:250
+#: includes/um-expire-user-roles.php:253
 #, php-format
 msgid "You can get a Reminder email %s before your User Role Expiration date."
 msgstr ""
 
-#: admin/settings.php:204
+#: admin/settings.php:206
 msgid ""
 "You may use the following placeholders in the notification email messages "
 "below:"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:269
+#: includes/um-expire-user-roles.php:272
 #, php-format
 msgid ""
 "You must confirm your update of the User Role Expiration date before sending "
@@ -838,37 +834,38 @@ msgstr ""
 msgid "Your user details have expired."
 msgstr ""
 
-#: includes/um-expire-user-roles.php:319
+#: includes/um-expire-user-roles.php:322
 #, php-format
 msgid "Your User Role %151s Expired %252s"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:330
+#: includes/um-expire-user-roles.php:333
 #, php-format
 msgid "Your User Role %151s Expired %252s ago"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:318
+#: includes/um-expire-user-roles.php:321
 #, php-format
 msgid "Your User Role %151s Expires %252s"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:329
+#: includes/um-expire-user-roles.php:332
 #, php-format
 msgid "Your User Role %151s Expires in %252s"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:331
+#: includes/um-expire-user-roles.php:334
 #, php-format
 msgid "Your User Role %s is Expired"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:320 includes/um-expire-user-roles.php:332
+#: includes/um-expire-user-roles.php:323 includes/um-expire-user-roles.php:335
 #, php-format
 msgid "Your User Role %s will Never Expire"
 msgstr ""
 
-#: includes/um-expire-user-roles.php:364
+#: includes/um-expire-user-roles.php:367
 #, php-format
 msgid "Your User Role name now is %s"
 msgstr ""
+
