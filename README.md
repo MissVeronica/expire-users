@@ -95,7 +95,9 @@ Allowed Attributes:
 * A combination of both shortcodes is used for the first line of the User Account page.
 
 ### 2.6 Cron job
-* The "Expire Users" cronjob is searching database for Expired Users and Users to send Reminders to either hourly for Days and Weeks time periods or twice daily for Months and Years time periods
+* The "Expire Users" Cron job is searching database for Expired Users and Users to send Reminders to either hourly for Days and Weeks time periods or twice daily for Months and Years time periods
+* The Cron job is activated/deactivated with the plugin's activation/deactivation.
+* For listing of the Cron job with a Cron events plugin use the hook "expire_user_cron" for searching
 
 ### 2.7 Translations & Text changes
 * Available translations are local language files ( FR, NL, IT, BR ) for the original "Expire Users" plugin which are downloaded and installed with the plugin
