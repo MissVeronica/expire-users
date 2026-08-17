@@ -1,4 +1,4 @@
-# UM - Expire User Roles - Version 2.0.0 BETA
+# UM - Expire User Roles - Version 2.0.0
  Extension to Ultimate Member for User Roles Expiration based on an updated version of the [Expire Users](https://github.com/benhuson/expire-users) plugin.
 
 Support for:
