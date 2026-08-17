@@ -2,7 +2,7 @@
 /**
  * Plugin Name:         Ultimate Member - Expire User Roles
  * Description:         Extension to Ultimate Member for User Roles Expiration based on an updated version of the <a href="https://github.com/MissVeronica/expire-users-um" target="_blank">Expire Users</a> plugin.
- * Version:             2.0.0 BETA
+ * Version:             2.0.0
  * Requires PHP:        7.4
  * PHP version tested   8.5.7
  * Author:              Miss Veronica
